@@ -1,1 +1,13 @@
+# Learning Git - Complete Documentation
+
+## Student Details
+- **Name**: [Your Name]
+- **Faculty**: [Faculty Name]
+- **Course**: [Course Name]
+- **Academic Year**: [Year]
+
+## Project Overview
+This repository contains comprehensive documentation of my Git learning journey...
+
+[Complete this with your details]
 
