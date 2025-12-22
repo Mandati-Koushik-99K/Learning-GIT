@@ -239,7 +239,8 @@ I needed to checkout a specific commit (C4) directly using its hash/label rather
 
 #### 📸 Screenshot
 
-![Level 2.1 - Detached HEAD](images/level-2-1.png)
+<img width="1914" height="948" alt="Lv2-1" src="https://github.com/user-attachments/assets/aaeb2299-47e8-4a63-aafd-1d35e09db001" />
+
 
 *Screenshot showing HEAD detached and pointing directly to commit C4, independent of any branch*
 
@@ -298,7 +299,8 @@ Instead of using commit hashes, I used relative references with the `^` operator
 
 #### 📸 Screenshot
 
-![Level 2.2 - Relative Refs Caret](images/level-2-2.png)
+<img width="1915" height="943" alt="Lv2-2" src="https://github.com/user-attachments/assets/a2047bf7-b140-481c-9e20-4f4a65e08941" />
+
 
 *Screenshot showing HEAD moved to C3 (parent of C4) using the caret operator*
 
@@ -373,7 +375,8 @@ This level introduces the `~` operator for moving multiple commits at once and t
 
 #### 📸 Screenshot
 
-![Level 2.3 - Relative Refs Tilde](images/level-2-3.png)
+<img width="1912" height="954" alt="Lv-2-3" src="https://github.com/user-attachments/assets/9f6fe60b-f32a-4e68-a0d7-ac84177433b8" />
+
 
 *Screenshot showing bugFix branch force-moved to C0 and HEAD detached at commit above bugFix*
 
@@ -471,7 +474,8 @@ git revert HEAD         # Revert the latest commit
 
 #### 📸 Screenshot
 
-![Level 2.4 - Reversing Changes](images/level-2-4.png)
+<img width="1911" height="947" alt="Lv2-4" src="https://github.com/user-attachments/assets/292a763d-403c-4276-a54f-f3b1305daf8b" />
+
 
 *Screenshot showing local branch reset to C1 and pushed branch with new revert commit C2'*
 
