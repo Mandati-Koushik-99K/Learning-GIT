@@ -36,6 +36,12 @@ This repository contains comprehensive documentation of my Git learning journey 
 #### 📋 Problem Statement
 Make two commits on the current branch to reach the goal.
 
+#### 📸 Screenshot
+
+<img width="1890" height="934" alt="Lv1-1" src="https://github.com/user-attachments/assets/a98ddd5d-6e3a-49eb-bbb1-5fceb4ecf769" />
+
+*Screenshot showing two successful git commits*
+
 **Challenge**: Just type `git commit` twice to finish!
 
 #### 💡 Solution Approach
@@ -48,12 +54,6 @@ Use `git commit` twice. Each commit saves the current staged changes and advance
 | `git commit` | Create first commit (saves current state) |
 | `git commit` | Create second commit (advances branch further) |
 
-#### 📸 Screenshot
-
-<img width="1890" height="934" alt="Lv1-1" src="https://github.com/user-attachments/assets/a98ddd5d-6e3a-49eb-bbb1-5fceb4ecf769" />
-
-
-*Screenshot showing two successful git commits*
 
 #### 📝 Explanation & Learning
 
