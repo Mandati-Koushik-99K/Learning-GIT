@@ -691,7 +691,7 @@ Need to undo changes?
 
 ## Resources & References
 
-- [Learn Git Branching](https://learngitbranching.js.org/) - Interactive tutorial
+- [Learn Git Branching]https://learngitbranching.js.org/ - Interactive tutorial
 - [Git Documentation](https://git-scm.com/doc) - Official docs
 - [GitHub Guides](https://guides.github.com/) - GitHub tutorials
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) - Comprehensive guides
