@@ -630,8 +630,6 @@ Need to undo changes?
 
 ---
 
-*Level 2 completed! Ready for Level 3: Moving Work Around*
-
 ## Level 3: Moving Work Around
 
 ### 3.1 [Level Name]
