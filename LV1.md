@@ -75,6 +75,12 @@ Use `git commit` twice. Each commit saves the current staged changes and advance
 #### 📋 Problem Statement
 Create a new branch and switch (check out) to it.
 
+#### 📸 Screenshot
+
+<img width="1911" height="929" alt="Lv1-2" src="https://github.com/user-attachments/assets/ec93c039-abf0-4251-bd76-1c85091aa10c" />
+
+*Screenshot showing branch creation and checkout*
+
 **Challenge**: Make a new branch with `git branch <name>` and check it out with `git checkout <name>`
 
 #### 💡 Solution Approach
@@ -88,12 +94,6 @@ First create the branch `bugFix`, then switch to it so HEAD points to the new br
 | `git checkout bugFix` | Switch to branch `bugFix` (move HEAD to that branch) |
 
 **Alternative**: `git checkout -b bugFix` (creates and switches in one command)
-
-#### 📸 Screenshot
-
-![Level 1.2 - Branching](images/level-1-2.png)
-
-*Screenshot showing branch creation and checkout*
 
 #### 📝 Explanation & Learning
 
@@ -115,6 +115,12 @@ First create the branch `bugFix`, then switch to it so HEAD points to the new br
 #### 📋 Problem Statement
 Create a `bugFix` branch, commit on it, return to main, commit there, then merge the `bugFix` branch into main.
 
+#### 📸 Screenshot
+
+<img width="1913" height="943" alt="Lv1-3" src="https://github.com/user-attachments/assets/bdadafdd-8347-4eb7-be08-e4f27e1cdaf5" />
+
+*Screenshot showing the merge operation and resulting commit graph*
+
 **Challenge**: Complete commits in the specified order (bugFix before main)
 
 #### 💡 Solution Approach
@@ -135,11 +141,6 @@ Create a `bugFix` branch, commit on it, return to main, commit there, then merge
 | `git commit` | Commit changes on main (creates commit c3) |
 | `git merge bugFix` | Merge the bugFix branch into main |
 
-#### 📸 Screenshot
-
-![Level 1.3 - Merging](images/level-1-3.png)
-
-*Screenshot showing the merge operation and resulting commit graph*
 
 #### 📝 Explanation & Learning
 
@@ -161,6 +162,12 @@ Create a `bugFix` branch, commit on it, return to main, commit there, then merge
 
 #### 📋 Problem Statement
 After creating a `bugFix` branch and committing to both branches, rebase the `bugFix` branch onto main so bugFix commits appear as if they were made after the latest main commits.
+
+#### 📸 Screenshot
+
+<img width="1906" height="939" alt="Lv1-4" src="https://github.com/user-attachments/assets/4450c9b6-c90e-440b-b0ce-b7232bd15608" />
+
+*Screenshot showing rebase operation creating new commit c2'*
 
 **Challenge**: Create a linear history by rebasing
 
@@ -184,11 +191,6 @@ This creates new commits (c2') with different hashes but same changes.
 | `git checkout bugFix` | Go back to bugFix |
 | `git rebase main` | Rebase bugFix onto tip of main (creates c2') |
 
-#### 📸 Screenshot
-
-![Level 1.4 - Rebase](images/level-1-4.png)
-
-*Screenshot showing rebase operation creating new commit c2'*
 
 #### 📝 Explanation & Learning
 
