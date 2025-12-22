@@ -50,7 +50,8 @@ Use `git commit` twice. Each commit saves the current staged changes and advance
 
 #### 📸 Screenshot
 
-![Level 1.1 - Git Commits](images/level-1-1.png)
+![Level 1.1 - Git Commits](<img width="1890" height="934" alt="Lv1-1" src="https://github.com/user-attachments/assets/0ff3083d-6556-40af-8ce2-aec87fb77c7f" />
+)
 
 *Screenshot showing two successful git commits*
 
