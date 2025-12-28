@@ -1,3 +1,13 @@
+## Table of Contents
+
+- [Level 5: Advanced Topics](#level-5-advanced-topics)
+  - [5.1 Rebasing over 9000 times](#51-rebasing-over-9000-times)
+  - [5.2 Multiple Parents](#52-multiple-parents)
+  - [5.3 Branch Spaghetti](#53-branch-spaghetti)
+
+---
+
+
 ## Level 5: Advanced Topics
 
 ### 5.1 Rebasing over 9000 times
