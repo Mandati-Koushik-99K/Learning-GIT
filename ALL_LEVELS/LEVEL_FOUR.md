@@ -1,3 +1,14 @@
+## Table of Contents
+
+- [Level 4: A Mixed Bag](#level-4-a-mixed-bag)
+  - [4.1 Grabbing Just 1 Commit](#41-grabbing-just-1-commit)
+  - [4.2 Juggling Commits](#42-juggling-commits)
+  - [4.3 Juggling Commits #2](#43-juggling-commits-2)
+  - [4.4 Git Tags](#44-git-tags)
+  - [4.5 Git Describe](#45-git-describe)
+
+---
+
 ## Level 4: A Mixed Bag
 
 ### 4.1 Grabbing Just 1 Commit
