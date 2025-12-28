@@ -1,3 +1,11 @@
+## Table of Contents
+
+- [Level 3: Moving Work Around](#level-3-moving-work-around)
+  - [3.1 Cherry-pick Intro](#31-cherry-pick-intro)
+  - [3.2 Interactive Rebase Intro](#32-interactive-rebase-intro)
+
+---
+
 ## Level 3: Moving Work Around
 
 ### 3.1 Cherry-pick Intro
@@ -48,18 +56,6 @@ This creates new commits (C3', C4', C7') on main with the same changes but diffe
   - **Non-destructive**: Original commits remain unchanged on source branches
   - **Order Matters**: Commits are applied in the order specified in the command
 
-- **Visual Understanding**:
-  - **Left side (initial state)**: 
-    - Main branch at C1
-    - bugFix branch has C2 and C3
-    - side branch has C4 and C5
-    - another branch has C6 and C7
-  - **Right side (goal state)**:
-    - Main branch now has C1 → C2' → C4' → C7'
-    - These are COPIES of C3, C4, C7 (shown with same colors)
-    - Original branches remain unchanged
-    - overHere branch created at C1
-
 - **Syntax Variations**:
   ```bash
   # Single commit
@@ -77,13 +73,6 @@ This creates new commits (C3', C4', C7') on main with the same changes but diffe
   # Using relative refs
   git cherry-pick HEAD~2
   ```
-
-- **Practical Application**:
-  - **Hotfixes**: Apply a bug fix from one branch to another
-  - **Selective Features**: Pick specific features without merging entire branch
-  - **Backporting**: Apply fixes to older release branches
-  - **Organizing Commits**: Reorder or reorganize commits
-  - **Emergency Patches**: Quickly apply critical fixes to production
 
 - **Real-World Scenario**:
   ```bash
@@ -122,17 +111,7 @@ This creates new commits (C3', C4', C7') on main with the same changes but diffe
   - Can cause merge conflicts if changes overlap
   - Creates duplicate commits in repository history
   - Use sparingly in collaborative environments
-
-- **Handling Conflicts**:
-  ```bash
-  git cherry-pick c3
-  # If conflict occurs:
-  # 1. Fix conflicts in files
-  # 2. git add <resolved-files>
-  # 3. git cherry-pick --continue
-  # Or abort: git cherry-pick --abort
-  ```
-
+    
 ---
 
 ### 3.2 Interactive Rebase Intro
@@ -222,38 +201,6 @@ In this level, I needed to rebase the last 4 commits and selectively include/exc
   5. Git replays commits according to your instructions
   ```
 
-- **Practical Application**:
-  
-  **Use Cases:**
-  - **Clean up messy history** before merging to main
-  - **Combine related commits** (squash WIP commits)
-  - **Reorder commits** for logical flow
-  - **Remove debugging commits** or mistakes
-  - **Split large commits** into smaller ones
-  - **Fix commit messages** (reword)
-
-  **Example Workflow:**
-  ```bash
-  # Before pushing, clean up last 5 commits
-  git rebase -i HEAD~5
-  
-  # In editor, might see:
-  # pick abc123 Add feature X
-  # pick def456 WIP debugging
-  # pick ghi789 Fix typo
-  # pick jkl012 Add tests
-  # pick mno345 Update docs
-  
-  # Change to:
-  # pick abc123 Add feature X
-  # fixup def456 WIP debugging      # Combine with previous
-  # fixup ghi789 Fix typo           # Combine with previous  
-  # pick jkl012 Add tests
-  # pick mno345 Update docs
-  
-  # Result: Clean 3-commit history
-  ```
-
 - **Interactive Rebase Actions Explained**:
 
   | Action | Effect | When to Use |
@@ -282,33 +229,6 @@ In this level, I needed to rebase the last 4 commits and selectively include/exc
   
   # Save and exit
   # Git replays commits, combining the bug fix with feature
-  ```
-
-- **Common Interactive Rebase Workflows**:
-
-  **1. Squash WIP commits:**
-  ```
-  pick commit1 Add feature
-  squash commit2 WIP
-  squash commit3 WIP  
-  squash commit4 More WIP
-  → Results in 1 clean commit
-  ```
-
-  **2. Reorder commits:**
-  ```
-  pick commit3 Tests (move up)
-  pick commit1 Feature
-  pick commit2 Docs
-  → New order: tests, feature, docs
-  ```
-
-  **3. Remove debugging commits:**
-  ```
-  pick commit1 Feature
-  drop commit2 Debug print statements
-  pick commit3 Tests
-  → Commit2 disappears from history
   ```
 
 - **Safety and Best Practices**:
@@ -372,14 +292,7 @@ In this level, I needed to rebase the last 4 commits and selectively include/exc
   git checkout main
   git merge feature-branch  # Clean history!
   ```
-
-- **Power User Tips**:
-  - Use `git log --oneline --graph` to visualize before rebasing
-  - Create a backup branch: `git branch backup-feature`
-  - Use `fixup` more than `squash` for cleaner messages
-  - Set editor: `git config --global core.editor "code --wait"`
-  - Use `autosquash` feature for automatic cleanup
-
+  
 - **The Golden Rule of Interactive Rebase**:
   > **Never rebase commits that have been pushed to a shared repository!** 
   > Interactive rebase rewrites history. If others have based work on your commits, rewriting will cause major conflicts and confusion.
