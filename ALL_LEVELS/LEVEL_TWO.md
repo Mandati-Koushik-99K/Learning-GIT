@@ -1,3 +1,14 @@
+
+## Table of Contents
+
+- [Level 2: Ramping Up](#level-2-ramping-up)
+  - [2.1 Detach yo' HEAD](#21-detach-yo-head)
+  - [2.2 Relative Refs (^)](#22-relative-refs-)
+  - [2.3 Relative Refs #2 (~)](#23-relative-refs-2-)
+  - [2.4 Reversing Changes in Git](#24-reversing-changes-in-git)
+
+---
+
 ## Level 2: Ramping Up
 
 ### 2.1 Detach yo' HEAD
