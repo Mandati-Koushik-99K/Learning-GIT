@@ -22,10 +22,6 @@ This repository contains comprehensive documentation of my Git learning journey 
   - [1.2 Branching in Git](#12-branching-in-git)
   - [1.3 Merging in Git](#13-merging-in-git)
   - [1.4 Rebase Introduction](#14-rebase-introduction)
-- [Level 2: Ramping Up](#level-2-ramping-up)
-- [Level 3: Moving Work Around](#level-3-moving-work-around)
-- [Level 4: A Mixed Bag](#level-4-a-mixed-bag)
-- [Level 5: Advanced Topics](#level-5-advanced-topics)
 
 ---
 
