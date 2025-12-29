@@ -57,16 +57,6 @@ I needed to checkout a specific commit (C4) directly using its hash/label rather
   - Right side (pink/goal): Shows HEAD detached and pointing to C4
   - The bugFix branch remains at C4, but HEAD is independent
 
-- **Practical Application**:
-  - Useful for exploring old versions of code without affecting branches
-  - Good for testing/debugging historical states
-  - Can create a new branch from detached HEAD: `git branch new-branch-name`
-  - Use `git checkout main` to reattach HEAD to a branch
-
-- **Warning**: 
-  - Commits made in detached HEAD state can be lost if you switch branches without saving them
-  - Always create a branch if you want to keep work done in detached HEAD state
-
 ---
 
 ### 2.2 Relative Refs (^)
@@ -126,11 +116,6 @@ Instead of using commit hashes, I used relative references with the `^` operator
   - Right side: HEAD moved to C3 using `HEAD^` operator
   - The ^ operator traveled UP the commit tree (to older commit)
 
-- **Practical Application**:
-  - Useful when you don't know exact commit hashes
-  - Makes scripts more portable (don't need to hardcode hashes)
-  - Quick navigation through commit history
-  - Essential for complex Git operations
 
 - **Comparison with Absolute References**:
   | Absolute | Relative |
@@ -209,18 +194,7 @@ This level introduces the `~` operator for moving multiple commits at once and t
   - bugFix needs to be at C0 (root commit)
   - HEAD needs to be positioned correctly
   - Force-moving branches allows repositioning without checking out
-
-- **The Power of git branch -f**:
-  - Moves branch pointers without checking them out
-  - Syntax: `git branch -f <branch> <target-commit>`
-  - Useful for reorganizing branches
-  - **Warning**: Dangerous on shared/public branches!
-
-- **Practical Application**:
-  - Moving branches to specific commits for testing
-  - Resetting feature branches to earlier states
-  - Cleaning up branch structure
-  - Useful in scripts and automation
+  - 
 
 - **Safety Note**:
   - `git branch -f` rewrites branch pointers
@@ -328,35 +302,6 @@ git revert HEAD         # Revert the latest commit
   - You want to keep history of the mistake
   - Example: `git revert HEAD` (undo last commit safely)
 
-- **Real-World Scenario**:
-  ```bash
-  # Oops, committed a bug to local branch
-  git reset HEAD~1        # ✓ Safe - not pushed yet
-  
-  # Oops, committed a bug and already pushed
-  git revert HEAD         # ✓ Safe - creates undo commit
-  git push                # Share the fix
-  
-  # DON'T DO THIS:
-  git reset HEAD~1        # ✗ Danger if already pushed!
-  git push -f             # ✗ This breaks others' repos!
-  ```
-
-- **Reset Modes** (Advanced):
-  - `git reset --soft`: Move HEAD, keep changes staged
-  - `git reset --mixed`: Move HEAD, unstage changes (default)
-  - `git reset --hard`: Move HEAD, discard all changes (destructive!)
-
-- **Practical Application**:
-  - Fixing mistakes in local work: use `reset`
-  - Undoing published changes: use `revert`
-  - Team collaboration: always `revert` on shared branches
-  - Personal experimentation: `reset` is fine
-
-- **Memory Aid**:
-  - **Reset** = **Rewind** (go back in time, erase history)
-  - **Revert** = **Reverse** (add a new opposite commit, keep history)
-
 - **Important Safety Rule**:
   > **Golden Rule**: If commits have been pushed and others might have pulled them, ALWAYS use `git revert`, NEVER use `git reset`!
 
@@ -409,14 +354,3 @@ git revert HEAD         # Revert the latest commit
 - Reset commits that have been pushed to shared repos
 - Revert when a simple reset would suffice (on local work)
 
-### Git Workflow Decision Tree
-
-```
-Need to undo changes?
-│
-├─ Changes only local (not pushed)?
-│  └─ Use git reset ✓
-│
-└─ Changes pushed/shared with others?
-   └─ Use git revert ✓
-```
