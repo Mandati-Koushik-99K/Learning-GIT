@@ -167,7 +167,6 @@ Each exercise includes:
 - 📚 [Learn Git Branching](https://learngitbranching.js.org/) - Interactive tutorial
 - 📖 [Official Git Documentation](https://git-scm.com/doc) - Complete reference
 - 🎓 [GitHub Guides](https://guides.github.com/) - GitHub-specific tutorials
-- 🛠️ [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) - Comprehensive guides
 
 
 ## 🤝 Acknowledgments
