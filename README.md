@@ -183,10 +183,6 @@ This documentation is created for educational purposes as part of coursework.
 
 <div align="center">
 
-### 🎉 Git Mastery Achieved! 🎉
-
-*"Understanding Git is not about memorizing commands—it's about understanding the graph structure."*
-
 **⭐ Star this repository if you found it helpful!**
 
 </div>
